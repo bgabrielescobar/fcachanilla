@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120" width="360" height="120" role="img" aria-label="Farmacias Cachanilla">
+  <!-- Symbol: medical cross with figures (people/heart) -->
+  <g>
+    <!-- Rounded blue cross -->
+    <rect x="36" y="6" width="34" height="108" rx="12" fill="#16357e"/>
+    <rect x="6" y="43" width="94" height="34" rx="12" fill="#16357e"/>
+    <!-- Gold figure (person) -->
+    <circle cx="42" cy="40" r="9" fill="#f4a01e"/>
+    <path d="M30 78 q12 -26 24 0 q-12 14 -24 0 Z" fill="#f4a01e"/>
+    <!-- Light blue figure (person) -->
+    <circle cx="64" cy="40" r="9" fill="#2456b8"/>
+    <path d="M52 78 q12 -26 24 0 q-12 14 -24 0 Z" fill="#2456b8"/>
+  </g>
+
+  <!-- Text -->
+  <g font-family="Poppins, Arial, sans-serif">
+    <text x="120" y="46" font-size="22" font-weight="600" fill="#2456b8" letter-spacing="1">FARMACIAS</text>
+    <text x="118" y="80" font-size="34" font-weight="800" fill="#16357e" letter-spacing="0.5">CACHANILLA</text>
+    <line x1="120" y1="92" x2="350" y2="92" stroke="#f4a01e" stroke-width="2"/>
+    <text x="120" y="108" font-size="11" font-weight="600" fill="#5b6477" letter-spacing="3">LA RECETA INDICADA PARA TI</text>
+  </g>
+</svg>

@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmacias Cachanilla · La receta indicada para ti</title>
+    <meta
+      name="description"
+      content="Farmacias Cachanilla en Mexicali, B.C. Medicamentos de calidad, promociones todos los días y atención personalizada. La receta indicada para ti."
+    />
+
+    <!-- Fonts: Poppins, Inter, Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="catalog.css" />
+  </head>
+  <body>
+    <!-- ===== Top bar: Special Offers ===== -->
+    <div class="topbar">
+      <div class="topbar__inner">
+        <span class="topbar__icon">★</span>
+        <p>¡Ofertas Especiales, todos los días!</p>
+        <span class="topbar__icon">★</span>
+      </div>
+    </div>
+
+    <!-- ===== Header: logo + large search ===== -->
+    <header class="header" id="inicio">
+      <div class="header__inner">
+        <a
+          href="#inicio"
+          class="brand"
+          aria-label="Farmacias Cachanilla - Inicio"
+        >
+          <img
+            src="images/fcachanilla.png"
+            onerror="
+              this.onerror = null;
+              this.src = 'images/logo.svg';
+            "
+            alt="Farmacias Cachanilla"
+            class="brand__logo"
+          />
+        </a>
+
+        <form class="search" role="search" onsubmit="return false;">
+          <input
+            type="search"
+            class="search__input"
+            id="searchInput"
+            placeholder="Busca tu medicamento o producto de salud…"
+            autocomplete="off"
+          />
+          <button type="submit" class="search__btn" aria-label="Buscar">
+            <svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- ===== Navbar ===== -->
+
+      <nav class="nav" aria-label="Navegación principal">
+        <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
+          ☰
+        </button>
+        <ul class="nav__list" id="navList">
+          <li><a href="#inicio" class="is-active">Inicio</a></li>
+          <li><a href="#promociones">Promociones</a></li>
+          <li><a href="medicines.html">Medicamento</a></li>
+          <li><a href="#quienes-somos">Quiénes Somos</a></li>
+          <li><a href="#localizanos">Localízanos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== Promotions banner ===== -->
+    <section class="promos" id="promociones">
+      <div class="section-head">
+        <span class="section-head__kicker">Calendario oficial</span>
+        <h2 class="section-head__title">Promociones de la semana</h2>
+        <p class="section-head__sub">
+          Promociones válidas todos los días · Consulta términos y condiciones
+          en tienda
+        </p>
+      </div>
+
+      <!-- Main carousel -->
+      <div class="banner">
+        <div class="banner__track" id="bannerTrack">
+          <figure class="banner__slide">
+            <img
+              src="images/banner/6cffe744-ce53-4733-be3e-1de3a39f2cb5.png"
+              alt="Hot Sale 15% de descuento en Farmacias Cachanilla"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="banner__slide">
+            <img
+              src="images/banner/8ad12cfd-c599-4c02-a518-614a03417644.png"
+              alt="Lunes de Ofertas Exclusivas"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="banner__slide">
+            <img
+              src="images/banner/b4b0b1b1-4445-47c0-91e2-8fb23d825919.png"
+              alt="Encuentra los medicamentos y productos para el cuidado de tu salud"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="banner__slide">
+            <img
+              src="images/banner/c88b5c48-6c72-4210-8915-53090e81ed5e.png"
+              alt="Nuestro personal está listo para surtir tu receta"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="banner__slide">
+            <img
+              src="images/banner/e79104b1-02ad-48b0-a302-bc92f5e53a52.png"
+              alt="Garnier SkinActive Agua Micelar Todo-en-1"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+
+        <button
+          class="banner__nav banner__nav--prev"
+          id="bannerPrev"
+          aria-label="Anterior"
+        >
+          ‹
+        </button>
+        <button
+          class="banner__nav banner__nav--next"
+          id="bannerNext"
+          aria-label="Siguiente"
+        >
+          ›
+        </button>
+        <div class="banner__dots" id="bannerDots"></div>
+      </div>
+
+      <!-- Featured medicines -->
+      <div class="featured__head">
+        <h3 class="gallery__title">Medicamentos destacados</h3>
+        <a class="featured__all" href="medicines.html">Ver todos ›</a>
+      </div>
+      <div class="catalog__grid" id="featuredMeds">
+        <p class="empty">Cargando medicamentos…</p>
+      </div>
+    </section>
+
+    <!-- ===== Brands we sell ===== -->
+    <section class="brands" id="medicamento">
+      <div class="section-head">
+        <span class="section-head__kicker">Confianza garantizada</span>
+        <h2 class="section-head__title">Encuentra tus marcas favoritas</h2>
+        <p class="section-head__sub">
+          Trabajamos con laboratorios líderes para cuidar a tu familia
+        </p>
+      </div>
+
+      <div class="brands__marquee">
+        <div class="brands__track" id="brandsGrid">
+          <!-- The cards (duplicated for the loop) are generated with JS (main.js) -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About us ===== -->
+    <section class="about" id="quienes-somos">
+      <div class="about__grid">
+        <div class="about__text">
+          <span class="section-head__kicker">Quiénes Somos</span>
+          <h2>La receta indicada para ti</h2>
+          <p>
+            En <strong>Farmacias Cachanilla</strong> cuidamos la salud de las
+            familias de Mexicali con medicamentos de calidad, precios justos y
+            atención personalizada y de confianza. Contamos con consultorios
+            médicos para acompañarte en cada paso.
+          </p>
+          <ul class="about__list">
+            <li>✔ Productos de calidad y suplementos confiables</li>
+            <li>✔ Precios justos: ahorra en tus medicamentos</li>
+            <li>✔ Atención cercana y siempre listos para ayudarte</li>
+            <li>✔ Compra fácil: en tienda, WhatsApp y próximamente en Didi</li>
+          </ul>
+        </div>
+        <div class="about__cards">
+          <img
+            class="about__img"
+            src="images/banner/quienes-somos.png"
+            alt="Calidad: medicamentos y suplementos confiables. Confianza: atención personalizada. Cercanía: visítanos en nuestras sucursales. Tu salud: es nuestra prioridad y misión."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Schedule ===== -->
+    <section class="hours">
+      <img
+        class="hours__img"
+        src="images/banner/hconsulta.png"
+        alt="Horario Consulta: 9:00 AM – 3:00 PM y 5:00 PM – 9:00 PM, Lunes a Domingo, 686 525 4918."
+      />
+      <img
+        class="hours__img"
+        src="images/banner/fhorario.png"
+        alt="Horario Farmacia: 8:00 AM – 10:00 PM, Lunes a Domingo, 686 349 5716."
+      />
+    </section>
+
+    <!-- ===== Footer with map ===== -->
+    <footer class="footer" id="localizanos">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <img
+            src="images/fcachanilla.png"
+            onerror="
+              this.onerror = null;
+              this.src = 'images/logo.svg';
+            "
+            alt="Farmacias Cachanilla"
+            class="footer__logo"
+          />
+          <p class="footer__tag">La receta indicada para ti</p>
+          <p class="footer__addr">
+            📍 Calle Río Culiacán 898, esquina con Josefa Ortiz de Domínguez,
+            Col. Prohogar, Mexicali, B.C. 21240
+          </p>
+          <div class="footer__contact">
+            <a href="tel:+526863495716">📞 686 349 5716</a>
+            <a href="https://wa.me/526863495716" target="_blank" rel="noopener"
+              >💬 WhatsApp</a
+            >
+          </div>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="https://wa.me/526863495716" aria-label="WhatsApp">✆</a>
+          </div>
+        </div>
+
+        <div class="footer__map">
+          <iframe
+            title="Ubicación Farmacias Cachanilla"
+            src="https://www.google.com/maps?q=Calle+R%C3%ADo+Culiacan+898,+Prohogar,+Mexicali,+21240&output=embed"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>
+          © <span id="year"></span> Farmacias Cachanilla · Tu salud es nuestra
+          prioridad
+        </p>
+      </div>
+    </footer>
+
+    <!-- ===== Floating WhatsApp button ===== -->
+    <a
+      class="whatsapp"
+      href="https://wa.me/526863495716?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20promociones"
+      target="_blank"
+      rel="noopener"
+      aria-label="Escríbenos por WhatsApp"
+    >
+      <svg
+        viewBox="0 0 32 32"
+        width="32"
+        height="32"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          d="M16 .5C7.4.5.5 7.4.5 16c0 2.8.7 5.4 2 7.7L.5 31.5l8-2.1c2.2 1.2 4.8 1.9 7.5 1.9 8.6 0 15.5-6.9 15.5-15.5S24.6.5 16 .5zm0 28.3c-2.4 0-4.7-.7-6.7-1.9l-.5-.3-4.7 1.2 1.3-4.6-.3-.5c-1.3-2-2-4.4-2-6.9C3.1 8.8 8.9 3 16 3s12.9 5.8 12.9 12.9S23.1 28.8 16 28.8zm7.1-9.7c-.4-.2-2.3-1.1-2.6-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.3-2.1-2.6-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.7.2-.2.3-.4.4-.7.1-.3 0-.5 0-.7-.1-.2-.9-2.1-1.2-2.9-.3-.8-.6-.7-.9-.7h-.7c-.2 0-.7.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.3 2.6 4 6.3 5.5.9.4 1.6.6 2.1.8.9.3 1.7.2 2.3.1.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.6.2-1.8-.1-.2-.3-.3-.7-.4z"
+        />
+      </svg>
+    </a>
+
+    <script src="data-medicines.js"></script>
+    <script src="store.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

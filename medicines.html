@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medicamentos · Farmacias Cachanilla</title>
+  <meta name="description" content="Catálogo de medicamentos de Farmacias Cachanilla: precios, presentación y descripción. Pide por WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="catalog.css" />
+</head>
+<body>
+
+  <div class="topbar"><div class="topbar__inner"><span class="topbar__icon">★</span><p>¡Ofertas Especiales, todos los días!</p><span class="topbar__icon">★</span></div></div>
+
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="brand" aria-label="Inicio">
+        <img src="images/fcachanilla.png" onerror="this.onerror=null;this.src='images/logo.svg'" alt="Farmacias Cachanilla" class="brand__logo" />
+      </a>
+      <form class="search" role="search" onsubmit="return false;">
+        <input type="search" class="search__input" id="catSearch" placeholder="Busca tu medicamento…" autocomplete="off" />
+        <button type="submit" class="search__btn" aria-label="Buscar">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </form>
+    </div>
+    <nav class="nav" aria-label="Navegación principal">
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+      <ul class="nav__list" id="navList">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#promociones">Promociones</a></li>
+        <li><a href="medicines.html" class="is-active">Medicamento</a></li>
+        <li><a href="index.html#quienes-somos">Quiénes Somos</a></li>
+        <li><a href="index.html#localizanos">Localízanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="catalog">
+    <div class="catalog__head">
+      <div>
+        <span class="section-head__kicker">Catálogo</span>
+        <h1 class="catalog__title">Medicamentos</h1>
+      </div>
+      <span class="catalog__count" id="catCount"></span>
+    </div>
+
+    <div class="catalog__chips" id="catChips"></div>
+
+    <div class="catalog__grid" id="catalogGrid">
+      <p class="empty">Cargando medicamentos…</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="localizanos">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <img src="images/fcachanilla.png" onerror="this.onerror=null;this.src='images/logo.svg'" alt="Farmacias Cachanilla" class="footer__logo" />
+        <p class="footer__tag">La receta indicada para ti</p>
+        <p class="footer__addr">📍 Calle Río Culiacán 898, Col. Prohogar, Mexicali, B.C. 21240</p>
+        <div class="footer__contact">
+          <a href="tel:+526863495716">📞 686 349 5716</a>
+          <a href="https://wa.me/526863495716" target="_blank" rel="noopener">💬 WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer__map">
+        <iframe title="Ubicación" src="https://www.google.com/maps?q=Calle+R%C3%ADo+Culiacan+898,+Prohogar,+Mexicali,+21240&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="footer__bottom"><p>© <span id="year"></span> Farmacias Cachanilla · Tu salud es nuestra prioridad</p></div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/526863495716" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 32 32" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M16 .5C7.4.5.5 7.4.5 16c0 2.8.7 5.4 2 7.7L.5 31.5l8-2.1c2.2 1.2 4.8 1.9 7.5 1.9 8.6 0 15.5-6.9 15.5-15.5S24.6.5 16 .5zm0 28.3c-2.4 0-4.7-.7-6.7-1.9l-.5-.3-4.7 1.2 1.3-4.6-.3-.5c-1.3-2-2-4.4-2-6.9C3.1 8.8 8.9 3 16 3s12.9 5.8 12.9 12.9S23.1 28.8 16 28.8zm7.1-9.7c-.4-.2-2.3-1.1-2.6-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.3-2.1-2.6-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.7.2-.2.3-.4.4-.7.1-.3 0-.5 0-.7-.1-.2-.9-2.1-1.2-2.9-.3-.8-.6-.7-.9-.7h-.7c-.2 0-.7.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.3 2.6 4 6.3 5.5.9.4 1.6.6 2.1.8.9.3 1.7.2 2.3.1.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.6.2-1.8-.1-.2-.3-.3-.7-.4z"/></svg>
+  </a>
+
+  <script src="data-medicines.js"></script>
+  <script src="store.js"></script>
+  <script src="catalog.js"></script>
+</body>
+</html>

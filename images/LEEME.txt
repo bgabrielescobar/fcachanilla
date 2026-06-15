@@ -1,0 +1,34 @@
+IMÁGENES QUE DEBES COLOCAR EN ESTA CARPETA
+==========================================
+
+Guarda aquí las imágenes que compartiste, con EXACTAMENTE estos nombres
+(así las muestra la página sin que cambies nada del código):
+
+1. logo.png
+   -> El logo de "Farmacias Cachanilla" (el de fondo blanco).
+      Recomendado: PNG con fondo transparente.
+
+2. promo-rovemax.jpg
+   -> El cartel de ROVEMAX (Diosmina · Hesperidina).
+
+3. promo-viernes.jpg
+   -> El cartel "VIERNES DE DISLIPIDEMIA" (Atorvastatina / Rosuvastatina).
+
+4. promo-jueves.jpg
+   -> El cartel "JUEVES DE OFERTAS EXCLUSIVAS" (Kit Hidratación $49).
+
+5. promo-consultorios.jpg
+   -> El cartel "VISITA NUESTROS CONSULTORIOS Y FARMACIA".
+
+CÓMO GUARDARLAS
+---------------
+- Desde el chat, haz clic derecho sobre cada imagen > "Guardar imagen como…"
+- Guárdala en esta carpeta (images) con el nombre indicado arriba.
+- Si una imagen es .png en lugar de .jpg (o al revés), cambia la
+  extensión en el archivo index.html para que coincida.
+
+MARCAS
+------
+Los logos de las marcas (Pfizer, Bayer, Sanofi, etc.) se cargan
+automáticamente desde internet en script.js. Si quieres usar tus propias
+imágenes, colócalas aquí y edita la lista "brands" en script.js.

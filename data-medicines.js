@@ -1,0 +1,45 @@
+/* JS copy of medicines.json so the site can be opened directly with a
+   double click (file://), where fetching local files is blocked.
+   The "official" source is medicines.json — if you edit one, edit the other.
+   Real product photos come from Wikimedia Commons (free to use). */
+window.MEDICINES = [
+  { id:"paracetamol-500", name:"Paracetamol 500 mg", brand:"Genérico Intermex", category:"Analgésico / Antipirético", price:28.50, oldPrice:35.00, presentation:"Caja con 20 tabletas", prescription:false, color:"#2456b8", description:"Alivia el dolor leve a moderado (cabeza, muscular, dental) y reduce la fiebre. Una de las opciones más usadas y seguras para toda la familia cuando se toma según indicaciones.", images:[
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Paracetamol_650.jpg/960px-Paracetamol_650.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Tylenol_paracetamol_sustained_release_tablets%2C_Chinese_version_%2820221212120513%29.jpg/960px-Tylenol_paracetamol_sustained_release_tablets%2C_Chinese_version_%2820221212120513%29.jpg"
+  ] },
+  { id:"ibuprofeno-400", name:"Ibuprofeno 400 mg", brand:"Genérico", category:"Antiinflamatorio (AINE)", price:45.00, oldPrice:58.00, presentation:"Caja con 10 tabletas", prescription:false, color:"#e0561f", description:"Antiinflamatorio no esteroideo para dolor e inflamación: muscular, articular, menstrual y dolor de cabeza. También ayuda a controlar la fiebre.", images:[
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/200mg_ibuprofen_tablets.jpg/960px-200mg_ibuprofen_tablets.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Amneal_Pharmaceuticals_ibuprofen_tablets.jpg/960px-Amneal_Pharmaceuticals_ibuprofen_tablets.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Bottle_of_Ibuprofen_tablets_with_cap_removed_and_tablets_in_front.jpg/960px-Bottle_of_Ibuprofen_tablets_with_cap_removed_and_tablets_in_front.jpg"
+  ] },
+  { id:"naproxeno-250", name:"Naproxeno 250 mg", brand:"Genérico", category:"Antiinflamatorio (AINE)", price:52.00, oldPrice:null, presentation:"Caja con 30 tabletas", prescription:false, color:"#c0392b", description:"Indicado para dolor e inflamación prolongados como artritis, dolor de espalda y cólicos menstruales. Su efecto es más duradero que otros analgésicos.", images:[
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Naproxen-250mg-16190835697216573249398282984232.jpg/960px-Naproxen-250mg-16190835697216573249398282984232.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/8/84/Naproxen.JPG"
+  ] },
+  { id:"omeprazol-20", name:"Omeprazol 20 mg", brand:"Genérico", category:"Gastrointestinal / IBP", price:38.00, oldPrice:49.00, presentation:"Caja con 14 cápsulas", prescription:false, color:"#16a085", description:"Reduce la producción de ácido en el estómago. Útil para acidez, reflujo y gastritis. Se recomienda tomar en ayunas para mejores resultados.", images:[
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Omeprazol_Activis_capsules.jpg/960px-Omeprazol_Activis_capsules.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Omeprazol_Activis_bottle.jpg/960px-Omeprazol_Activis_bottle.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Omeprazol_2012-10-14-0782.jpg/960px-Omeprazol_2012-10-14-0782.jpg"
+  ] },
+  { id:"loratadina-10", name:"Loratadina 10 mg", brand:"Genérico", category:"Antialérgico", price:42.00, oldPrice:null, presentation:"Caja con 10 tabletas", prescription:false, color:"#8e44ad", description:"Antihistamínico que alivia los síntomas de alergia: estornudos, comezón, ojos llorosos y congestión. No causa somnolencia en la mayoría de las personas.", images:[
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Fortune_NT-Alergi_tablet_%28contains_Loratadine_10mg%29.jpg/960px-Fortune_NT-Alergi_tablet_%28contains_Loratadine_10mg%29.jpg"
+  ] },
+  { id:"amoxicilina-500", name:"Amoxicilina 500 mg", brand:"Genérico", category:"Antibiótico", price:89.00, oldPrice:110.00, presentation:"Caja con 12 cápsulas", prescription:true, color:"#2980b9", description:"Antibiótico de amplio espectro para infecciones bacterianas respiratorias, urinarias y de piel. Su venta requiere receta médica; sigue siempre la indicación de tu doctor.", images:[
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Amoxicillin_500mg_capsules_on_a_plate_%28Sandoz%29.jpg/960px-Amoxicillin_500mg_capsules_on_a_plate_%28Sandoz%29.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Amoxicillin.JPG/960px-Amoxicillin.JPG"
+  ] },
+  { id:"metformina-850", name:"Metformina 850 mg", brand:"Genérico", category:"Antidiabético", price:55.00, oldPrice:70.00, presentation:"Caja con 30 tabletas", prescription:true, color:"#27ae60", description:"Medicamento de primera línea para el control de la diabetes tipo 2. Ayuda a regular los niveles de glucosa en sangre. Disponible en nuestro Martes de Diabetes con descuento.", images:[
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Metformin_500mg_Tablets.jpg/960px-Metformin_500mg_Tablets.jpg"
+  ] },
+  { id:"losartan-50", name:"Losartán 50 mg", brand:"Genérico", category:"Antihipertensivo", price:68.00, oldPrice:null, presentation:"Caja con 30 tabletas", prescription:true, color:"#d35400", description:"Controla la presión arterial alta y protege el corazón y los riñones. Parte de nuestro Miércoles de Hipertensión con precios especiales.", images:[
+    "https://upload.wikimedia.org/wikipedia/commons/c/cd/000771lg_Cozaar_100_MG_Oral_Tablet.jpg"
+  ] },
+  { id:"atorvastatina-20", name:"Atorvastatina 20 mg", brand:"Genérico", category:"Dislipidemia / Colesterol", price:95.00, oldPrice:120.00, presentation:"Caja con 30 tabletas", prescription:true, color:"#b3122a", description:"Reduce el colesterol LDL y los triglicéridos, ayudando a la prevención cardiovascular. Incluida en nuestro Viernes de Dislipidemia.", images:[
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Sortis_40_mg_tbl.jpg/960px-Sortis_40_mg_tbl.jpg"
+  ] },
+  { id:"aspirina-protect-100", name:"Aspirina Protect 100 mg", brand:"Bayer", category:"Antiagregante", price:48.00, oldPrice:null, presentation:"Caja con 28 tabletas", prescription:false, color:"#1f6fb2", description:"Ácido acetilsalicílico en dosis baja con capa entérica que protege el estómago. Usado para el cuidado cardiovascular bajo indicación médica.", images:[
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Regular_strength_enteric_coated_aspirin_tablets.jpg/960px-Regular_strength_enteric_coated_aspirin_tablets.jpg"
+  ] },
+  { id:"electrolit-suero", name:"Electrolit Suero 625 ml", brand:"Pisa", category:"Rehidratación", price:32.00, oldPrice:38.00, presentation:"Botella 625 ml sabor uva", prescription:false, color:"#1565c0", description:"Solución rehidratante que repone electrolitos y líquidos perdidos por calor, ejercicio, diarrea o resaca. Disponible en varios sabores.", images:[] },
+  { id:"vitamina-c-1g", name:"Vitamina C 1 g", brand:"Genérico", category:"Suplemento / Vitaminas", price:60.00, oldPrice:75.00, presentation:"Tubo con 10 tabletas efervescentes", prescription:false, color:"#f39c12", description:"Refuerza el sistema inmune y aporta antioxidantes. Tabletas efervescentes de fácil absorción, ideales en temporada de gripe y resfriados.", images:[] }
+];

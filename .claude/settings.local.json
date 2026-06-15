@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"C:/Users/Usuario/Documents/git/fcachanilla/images/\" 2>/dev/null; echo \"--- Downloads ---\"; ls \"C:/Users/Usuario/Downloads/\" 2>/dev/null | head -30)",
+      "Bash(grep -iE '\\\\.\\(png|jpg|jpeg|webp\\)$')",
+      "Bash(node --check catalogo.js)",
+      "Bash(node --check script.js)",
+      "Bash(node --check data-medicamentos.js)",
+      "PowerShell(try { $j = Get-Content \"C:\\\\Users\\\\Usuario\\\\Documents\\\\git\\\\fcachanilla\\\\medicamentos.json\" -Raw | ConvertFrom-Json; \"JSON valido - $\\($j.Count\\) medicamentos\" } catch { \"ERROR: $_\" })",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "Bash(git add *)",
+      "Bash(awk '{print $1, $2}')"
+    ]
+  }
+}

@@ -1,0 +1,425 @@
+/* ===================================================================
+   Farmacias Cachanilla — Styles
+   Palette based on the logo: navy blue + gold/orange + green cross
+   Fonts: Poppins (titles), Inter (body), Nunito (accents)
+=================================================================== */
+
+:root{
+  --navy:      #16357e;   /* logo's main blue */
+  --navy-dark: #0e2456;
+  --blue:      #2456b8;
+  --gold:      #f4a01e;   /* logo's gold/orange */
+  --gold-dark: #e08a0a;
+  --green:     #38a85a;   /* cross green */
+  --ink:       #1d2433;
+  --muted:     #5b6477;
+  --bg:        #f3f7fd;
+  --card:      #ffffff;
+  --line:      #e3eaf5;
+  --radius:    16px;
+  --shadow:    0 10px 30px rgba(22,53,126,.10);
+  --shadow-sm: 0 4px 14px rgba(22,53,126,.08);
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+
+html{ scroll-behavior:smooth; }
+
+body{
+  font-family:'Inter', system-ui, sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.6;
+}
+
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+
+h1,h2,h3,h4{ font-family:'Poppins', sans-serif; line-height:1.2; }
+
+/* ===== Top bar ===== */
+.topbar{
+  background:linear-gradient(90deg,var(--gold),var(--gold-dark));
+  color:#fff;
+}
+.topbar__inner{
+  max-width:1200px; margin:0 auto; padding:9px 20px;
+  display:flex; align-items:center; justify-content:center; gap:14px;
+  font-family:'Nunito', sans-serif; font-weight:800; letter-spacing:.4px;
+  font-size:.98rem; text-transform:uppercase;
+}
+.topbar__icon{ animation:twinkle 1.8s infinite ease-in-out; }
+@keyframes twinkle{ 0%,100%{opacity:1} 50%{opacity:.35} }
+
+/* ===== Header ===== */
+.header{
+  position:sticky; top:0; z-index:50;
+  background:#fff; box-shadow:var(--shadow-sm);
+}
+.header__inner{
+  max-width:1200px; margin:0 auto; padding:14px 20px;
+  display:flex; align-items:center; gap:24px; flex-wrap:wrap;
+}
+.brand__logo{ height:54px; width:auto; }
+
+/* Large minimalist search */
+.search{
+  flex:1; min-width:280px;
+  display:flex; align-items:center; gap:6px;
+  background:#fff;
+  border:1.5px solid var(--line);
+  border-radius:50px;
+  padding:5px 6px 5px 22px;
+  transition:border-color .2s, box-shadow .2s;
+}
+.search:focus-within{
+  border-color:var(--blue);
+  box-shadow:0 0 0 4px rgba(36,86,184,.10);
+}
+.search__input{
+  flex:1; border:none; outline:none; background:transparent;
+  font-family:'Inter',sans-serif; font-size:1.05rem; color:var(--ink);
+  padding:11px 4px;
+}
+.search__input::placeholder{ color:#9aa4b8; }
+/* Minimalist button: icon only */
+.search__btn{
+  flex:none; display:grid; place-items:center; cursor:pointer;
+  width:44px; height:44px; border-radius:50%;
+  border:none; background:var(--bg); color:var(--blue);
+  transition:background .2s, color .2s, transform .15s;
+}
+.search__btn:hover{ background:var(--blue); color:#fff; transform:scale(1.05); }
+
+/* ===== Navbar ===== */
+.nav{
+  background:linear-gradient(90deg,var(--navy-dark),var(--navy));
+}
+.nav__list{
+  max-width:1200px; margin:0 auto; padding:0 20px;
+  list-style:none; display:flex; gap:6px; flex-wrap:wrap;
+}
+.nav__list a{
+  display:block; color:#dce6fb; font-family:'Poppins',sans-serif;
+  font-weight:500; font-size:.98rem; padding:14px 20px;
+  border-bottom:3px solid transparent; transition:.2s;
+}
+.nav__list a:hover{ color:#fff; background:rgba(255,255,255,.08); }
+.nav__list a.is-active{ color:#fff; border-bottom-color:var(--gold); }
+.nav__toggle{
+  display:none; background:none; border:none; color:#fff;
+  font-size:1.6rem; padding:12px 20px; cursor:pointer;
+}
+
+/* ===== Section headers ===== */
+.section-head{ text-align:center; max-width:720px; margin:0 auto 34px; }
+.section-head__kicker{
+  display:inline-block; margin-bottom:12px;
+  font-family:'Nunito',sans-serif; font-weight:800; color:#fff;
+  text-transform:uppercase; letter-spacing:1.5px; font-size:.84rem;
+  background:linear-gradient(90deg,var(--gold),var(--gold-dark));
+  padding:7px 18px; border-radius:50px;
+  box-shadow:0 6px 16px rgba(244,160,30,.35);
+}
+.section-head__kicker::before{ content:'★ '; }
+.section-head__title{
+  font-size:clamp(1.6rem,3.4vw,2.4rem); color:var(--navy); margin:6px 0 10px;
+}
+.section-head__sub{ color:var(--muted); font-size:1.02rem; }
+
+/* ===== Promotions ===== */
+.promos{ max-width:1200px; margin:0 auto; padding:60px 20px; }
+
+.banner{ position:relative; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); }
+.banner__track{ display:flex; transition:transform .5s ease; }
+.banner__slide{ min-width:100%; }
+/* Horizontal banners: reduced height, no crop or distortion */
+.banner__slide img{
+  width:100%; height:clamp(220px,30vw,380px); object-fit:contain; display:block;
+  background:linear-gradient(180deg,#eef4fc,#dfeafa);
+}
+
+/* ---- Featured posters gallery ---- */
+.gallery__title{
+  text-align:center; color:var(--navy); font-size:clamp(1.3rem,2.6vw,1.7rem);
+  margin:44px 0 22px;
+}
+.gallery{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:18px;
+}
+.gallery__item{
+  display:block; border-radius:14px; overflow:hidden; background:#fff;
+  border:1px solid var(--line); box-shadow:var(--shadow-sm);
+  aspect-ratio:53/80; transition:transform .2s, box-shadow .2s;
+}
+.gallery__item:hover{ transform:translateY(-5px); box-shadow:var(--shadow); }
+.gallery__item img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+/* Featured medicines header */
+.featured__head{
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  margin:44px 0 22px; flex-wrap:wrap;
+}
+.featured__head .gallery__title{ margin:0; text-align:left; }
+.featured__all{
+  font-family:'Poppins',sans-serif; font-weight:600; color:var(--blue);
+  white-space:nowrap; transition:color .2s;
+}
+.featured__all:hover{ color:var(--navy); }
+
+/* ---- Posters designed with CSS ---- */
+.slide{
+  min-height:clamp(340px,42vw,460px);
+  padding:clamp(26px,4vw,52px);
+  color:#fff; display:flex; flex-direction:column; justify-content:center;
+}
+.slide h3{ font-size:clamp(1.6rem,4vw,3rem); letter-spacing:.5px; }
+.slide__tagline{ font-family:'Nunito',sans-serif; font-weight:800; font-size:clamp(1rem,2vw,1.3rem); margin-top:6px; }
+
+/* Slide 1 — Rovemax */
+.slide--rovemax{
+  background:linear-gradient(135deg,#eaf2fc 0%,#cfe0f7 100%); color:var(--navy);
+  flex-direction:row; align-items:center; gap:30px; justify-content:space-between;
+}
+.slide__brand{ font-family:'Poppins',sans-serif; font-weight:800; color:#1f7a4d; font-size:clamp(2rem,5vw,3.4rem); }
+.slide__sub{ font-weight:700; color:var(--navy); letter-spacing:1px; }
+.slide__dose{ color:var(--muted); margin-bottom:8px; }
+.slide--rovemax .slide__tagline{ color:var(--blue); margin:8px 0 16px; }
+.slide__feats{ list-style:none; display:grid; gap:8px; font-family:'Nunito',sans-serif; font-weight:700; }
+.slide__right{ display:flex; flex-direction:column; align-items:center; gap:14px; }
+.slide__box{
+  background:var(--navy); color:#fff; border-radius:16px; padding:18px 26px; text-align:center;
+  font-family:'Poppins',sans-serif; font-weight:600; line-height:1.1; display:flex; flex-direction:column;
+}
+.slide__box strong{ font-size:3rem; color:var(--gold); }
+.slide__lab{ font-family:'Poppins',sans-serif; font-weight:800; color:var(--navy); font-size:1.4rem; }
+
+/* Slides with a day header */
+.slide__head{ text-align:center; margin-bottom:18px; }
+.slide__day{
+  display:inline-block; background:#fff; color:var(--navy);
+  font-family:'Poppins',sans-serif; font-weight:800; font-size:clamp(1.4rem,3.5vw,2.4rem);
+  padding:4px 22px; border-radius:8px; letter-spacing:1px;
+}
+.slide__day--gold{ color:var(--gold-dark); }
+
+/* Slide 2 — Viernes */
+.slide--viernes{ background:linear-gradient(135deg,#b3122a,#7d0d1d); }
+/* Slide 3 — Jueves */
+.slide--jueves{ background:linear-gradient(135deg,#2a2f86,#171b5c); }
+/* Slide 4 — Consultorios */
+.slide--consultorios{ background:linear-gradient(135deg,var(--navy),var(--navy-dark)); }
+
+.slide__deals{ display:grid; grid-template-columns:1fr 1fr; gap:12px; max-width:760px; margin:0 auto; width:100%; }
+.slide__deals--row{ grid-template-columns:repeat(3,1fr); margin-top:14px; }
+.deal{
+  background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25);
+  border-radius:12px; padding:12px 16px; display:flex; align-items:center;
+  justify-content:space-between; gap:10px; backdrop-filter:blur(2px);
+}
+.deal span{ font-family:'Inter',sans-serif; font-weight:600; font-size:.95rem; }
+.deal strong{ font-family:'Poppins',sans-serif; font-weight:800; color:var(--gold); white-space:nowrap; }
+
+/* Hydration kit */
+.slide__kit{
+  display:flex; align-items:center; justify-content:center; gap:24px; flex-wrap:wrap;
+  background:rgba(255,255,255,.1); border-radius:14px; padding:16px 24px;
+  max-width:620px; margin:0 auto;
+}
+.kit__items{ font-family:'Nunito',sans-serif; font-weight:700; font-size:1.05rem; }
+.kit__items em{ color:var(--gold); font-style:normal; font-weight:800; }
+.kit__price{ display:flex; flex-direction:column; align-items:center; line-height:1; }
+.kit__price small{ font-size:.8rem; opacity:.85; }
+.kit__price strong{ font-family:'Poppins',sans-serif; font-weight:800; font-size:3rem; color:var(--gold); }
+
+/* Clinics — schedule */
+.slide__hours{ display:grid; grid-template-columns:1fr 1fr; gap:16px; max-width:680px; margin:0 auto; width:100%; }
+.hour{
+  background:rgba(255,255,255,.12); border-radius:14px; padding:16px; text-align:center;
+  display:flex; flex-direction:column; gap:4px;
+}
+.hour b{ font-family:'Poppins',sans-serif; font-size:1.1rem; }
+.hour span{ font-family:'Nunito',sans-serif; font-weight:700; color:var(--gold); }
+.hour small{ opacity:.85; }
+.slide__addr{ text-align:center; margin-top:16px; font-weight:600; }
+.banner__nav{
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:46px; height:46px; border-radius:50%; border:none; cursor:pointer;
+  background:rgba(255,255,255,.92); color:var(--navy);
+  font-size:1.8rem; line-height:1; box-shadow:var(--shadow-sm);
+  display:grid; place-items:center; transition:.2s;
+}
+.banner__nav:hover{ background:#fff; transform:translateY(-50%) scale(1.08); }
+.banner__nav--prev{ left:14px; }
+.banner__nav--next{ right:14px; }
+.banner__dots{
+  position:absolute; bottom:14px; left:0; right:0;
+  display:flex; gap:8px; justify-content:center;
+}
+.banner__dots button{
+  width:11px; height:11px; border-radius:50%; border:none; cursor:pointer;
+  background:rgba(22,53,126,.3); transition:.2s;
+}
+.banner__dots button.is-active{ background:var(--gold); width:28px; border-radius:6px; }
+
+/* Offer cards */
+.offers{
+  margin-top:26px;
+  display:grid; grid-template-columns:repeat(4,1fr); gap:18px;
+}
+.offer{
+  background:var(--card); border-radius:14px; padding:22px 20px;
+  box-shadow:var(--shadow-sm); border:1px solid var(--line);
+  transition:transform .2s, box-shadow .2s;
+}
+.offer:hover{ transform:translateY(-4px); box-shadow:var(--shadow); }
+.offer__badge{
+  display:inline-block; font-family:'Nunito',sans-serif; font-weight:800;
+  font-size:.72rem; text-transform:uppercase; letter-spacing:.6px;
+  color:#fff; padding:4px 12px; border-radius:50px; margin-bottom:12px;
+}
+.offer__badge--blue{ background:var(--blue); }
+.offer__badge--gold{ background:var(--gold); }
+.offer__badge--green{ background:var(--green); }
+.offer h3{ font-size:1.05rem; color:var(--navy); }
+.offer p{ color:var(--muted); font-size:.92rem; margin:4px 0 12px; }
+.offer__off{
+  font-family:'Poppins',sans-serif; font-weight:800; font-size:1.5rem;
+  color:var(--gold-dark);
+}
+
+/* ===== Brands ===== */
+.brands{ background:#fff; padding:60px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+
+/* Infinite carousel (marquee) */
+.brands__marquee{
+  overflow:hidden; width:100%;
+  -webkit-mask-image:linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+          mask-image:linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+}
+.brands__track{
+  display:flex; gap:22px; width:max-content;
+  animation:brandsScroll 55s linear infinite;
+}
+.brands__marquee:hover .brands__track{ animation-play-state:paused; }
+@keyframes brandsScroll{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-50%); }
+}
+@media (prefers-reduced-motion:reduce){
+  .brands__track{ animation:none; flex-wrap:wrap; justify-content:center; }
+}
+
+.brand-card{
+  flex:0 0 auto; width:190px; height:110px;
+  background:var(--card); border:1px solid var(--line); border-radius:14px;
+  display:grid; place-items:center; padding:18px;
+  box-shadow:var(--shadow-sm); transition:transform .2s, box-shadow .2s;
+  font-family:'Poppins',sans-serif; font-weight:700; font-size:1.1rem; color:var(--navy);
+  text-align:center;
+}
+.brand-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow); }
+.brand-card img{ max-height:50px; max-width:140px; width:auto; object-fit:contain; }
+
+/* ===== About us ===== */
+.about{ max-width:1200px; margin:0 auto; padding:64px 20px; }
+.about__grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center; }
+.about__text h2{ font-size:clamp(1.6rem,3vw,2.2rem); color:var(--navy); margin:6px 0 14px; }
+.about__text p{ color:var(--muted); font-size:1.05rem; margin-bottom:16px; }
+.about__list{ list-style:none; display:grid; gap:10px; }
+.about__list li{ font-family:'Nunito',sans-serif; font-weight:600; color:var(--ink); }
+.about__cards{ display:block; }
+.about__img{ width:100%; height:auto; display:block; border-radius:var(--radius); }
+.about__card{
+  background:var(--card); border:1px solid var(--line); border-radius:14px;
+  padding:22px 18px; text-align:center; box-shadow:var(--shadow-sm);
+}
+.about__card span{ font-size:2rem; display:block; margin-bottom:8px; }
+.about__card h4{ color:var(--navy); margin-bottom:4px; }
+.about__card p{ color:var(--muted); font-size:.9rem; }
+
+/* ===== Schedule ===== */
+.hours{
+  max-width:1000px; margin:0 auto 64px; padding:0 20px;
+  display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:center;
+}
+.hours__img{
+  width:100%; height:auto; display:block;
+  border-radius:var(--radius); box-shadow:var(--shadow);
+}
+@media (max-width:640px){
+  .hours{ grid-template-columns:1fr; }
+}
+
+/* ===== Footer ===== */
+.footer{ background:var(--navy-dark); color:#cdd8ef; }
+.footer__grid{
+  max-width:1200px; margin:0 auto; padding:54px 20px;
+  display:grid; grid-template-columns:1fr 1.2fr; gap:40px;
+}
+.footer__logo{ height:60px; background:#fff; padding:8px 12px; border-radius:12px; margin-bottom:14px; }
+.footer__tag{ font-family:'Nunito',sans-serif; font-weight:700; color:var(--gold); margin-bottom:16px; }
+.footer__addr{ margin-bottom:18px; max-width:340px; }
+.footer__contact{ display:flex; gap:18px; flex-wrap:wrap; margin-bottom:18px; }
+.footer__contact a{ font-family:'Poppins',sans-serif; font-weight:600; color:#fff; }
+.footer__contact a:hover{ color:var(--gold); }
+.footer__social{ display:flex; gap:10px; }
+.footer__social a{
+  width:40px; height:40px; border-radius:50%; display:grid; place-items:center;
+  background:rgba(255,255,255,.1); color:#fff; font-weight:700; transition:.2s;
+}
+.footer__social a:hover{ background:var(--gold); color:var(--navy-dark); }
+.footer__map{ border-radius:var(--radius); overflow:hidden; min-height:300px; box-shadow:var(--shadow); }
+.footer__map iframe{ display:block; height:100%; min-height:300px; }
+.footer__bottom{
+  border-top:1px solid rgba(255,255,255,.12); text-align:center;
+  padding:18px 20px; font-size:.9rem;
+}
+
+/* ===== Floating WhatsApp button ===== */
+.whatsapp{
+  position:fixed; right:22px; bottom:22px; z-index:80;
+  width:62px; height:62px; border-radius:50%;
+  background:#25d366; color:#fff;
+  display:grid; place-items:center;
+  box-shadow:0 8px 24px rgba(37,211,102,.45);
+  animation:pulse 2.2s infinite;
+  transition:transform .2s;
+}
+.whatsapp:hover{ transform:scale(1.08); }
+@keyframes pulse{
+  0%{ box-shadow:0 0 0 0 rgba(37,211,102,.5); }
+  70%{ box-shadow:0 0 0 16px rgba(37,211,102,0); }
+  100%{ box-shadow:0 0 0 0 rgba(37,211,102,0); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width:900px){
+  .offers{ grid-template-columns:1fr 1fr; }
+  .gallery{ grid-template-columns:repeat(3,1fr); }
+  .brands__grid{ grid-template-columns:repeat(3,1fr); }
+  .about__grid{ grid-template-columns:1fr; }
+  .footer__grid{ grid-template-columns:1fr; }
+}
+@media (max-width:640px){
+  .header__inner{ gap:14px; }
+  .brand__logo{ height:44px; }
+  .search__btn{ padding:12px 18px; }
+  .nav__toggle{ display:block; }
+  .nav__list{
+    display:none; flex-direction:column; padding:0;
+  }
+  .nav__list.is-open{ display:flex; }
+  .nav__list a{ padding:14px 20px; border-bottom:1px solid rgba(255,255,255,.08); }
+  .offers{ grid-template-columns:1fr; }
+  .gallery{ grid-template-columns:1fr 1fr; }
+  .brands__grid{ grid-template-columns:1fr 1fr; }
+  .about__cards{ grid-template-columns:1fr; }
+
+  /* Posters on mobile */
+  .slide--rovemax{ flex-direction:column; text-align:center; }
+  .slide__feats{ justify-items:center; }
+  .slide__deals{ grid-template-columns:1fr; }
+  .slide__deals--row{ grid-template-columns:1fr; }
+  .slide__hours{ grid-template-columns:1fr; }
+}
