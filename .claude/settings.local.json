@@ -9,7 +9,9 @@
       "PowerShell(try { $j = Get-Content \"C:\\\\Users\\\\Usuario\\\\Documents\\\\git\\\\fcachanilla\\\\medicamentos.json\" -Raw | ConvertFrom-Json; \"JSON valido - $\\($j.Count\\) medicamentos\" } catch { \"ERROR: $_\" })",
       "WebFetch(domain:commons.wikimedia.org)",
       "Bash(git add *)",
-      "Bash(awk '{print $1, $2}')"
+      "Bash(awk '{print $1, $2}')",
+      "Bash(git commit -m '@ *)",
+      "Bash(git config *)"
     ]
   }
 }
